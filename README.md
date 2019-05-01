@@ -1,0 +1,2 @@
+# strawberrypi
+django_test
