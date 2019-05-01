@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实时数据</title>
+</head>
+{% load staticfiles %}
+<link type="text/css" rel="stylesheet" href="/static/css/16.css">
+
+<body>
+<nav>
+<ul>
+<li class="zh">智慧农业监测系统</li>
+<li class="selected"><a href="{% url 'shishishuju'%}">{{shishishuju}}实时数据</a></li>
+<li><a href="{% url 'tuxiangjiexi' %}">{{views.tuxiangjiexi}}图像解析</a></li>
+<li><a href="{% url 'video' %}">{{views.video}}视频连接</a></li>
+<div class="dropdown">
+    <button class="dropbtn">历史数据</button>
+    <div class="dropdown-content">
+        <a href="{% url 'shujudaoru'%}">{{views.shujudaoru}}数据导入</a>
+        <a href="{% url 'shujufenxi'%}">{{views.shujufenxi}}数据分析</a>
+        <a href="{% url 'other1' %}">{{views.other1}}其他</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">数据查询</button>
+    <div class="dropdown-content">
+        <a href="{% url 'xiala1' %}">{{views.xiala1}}下拉导航 1</a>
+        <a href="{% url 'xiala2' %}">{{views.xiala2}}下拉导航 2</a>
+        <a href="{% url 'other1' %}">{{views.other1}}其他</a>
+    </div>
+</div>
+</ul>
+</nav>
+
+<table width="1300">
+<caption>实时数据</caption>
+<tr>
+ <th>数据类型</th>
+ <th>当前数值</th>
+ <th>分析系数</th>
+ <th>系数阈值</th>
+ <th>当前状态</th>
+</tr>
+<tr>
+ <td>光照强度</td>
+ <td>{{data11}}</td>
+ <td>{{data12}}</td>
+ <td>{{data13}}</td>
+ <td>{{data14}}</td>
+ </tr>
+<tr class="cell3">
+ <td>空气温度</td>
+ <td>{{data21}}</td>
+ <td>{{data22}}</td>
+ <td>{{data23}}</td>
+ <td>{{data24}}</td>
+</tr>
+<tr class="cell4">
+ <td>空气湿度</td>
+ <td>{{data31}}</td>
+ <td>{{data32}}</td>
+ <td>{{data33}}</td>
+ <td>{{data34}}</td>
+</tr>
+<tr class="cell5">
+ <td>土壤温度_1</td>
+ <td>{{data41}}</td>
+ <td>{{data42}}</td>
+ <td>{{data43}}</td>
+ <td>{{data44}}</td>
+</tr>
+<tr class="cell5">
+ <td>土壤湿度_1</td>
+ <td>{{data51}}</td>
+ <td>{{data52}}</td>
+ <td>{{data53}}</td>
+ <td>{{data54}}</td>
+</tr>
+<tr class="cell6">
+ <td>土壤温度_2</td>
+ <td>{{data61}}</td>
+ <td>{{data62}}</td>
+ <td>{{data63}}</td>
+ <td>{{data64}}</td>
+</tr>
+<tr class="cell6">
+ <td>土壤湿度_2</td>
+ <td>{{data71}}</td>
+ <td>{{data72}}</td>
+ <td>{{data73}}</td>
+ <td>{{data74}}</td>
+</tr>
+<tr class="cell7">
+ <td>土壤温度_3</td>
+ <td>{{data81}}</td>
+ <td>{{data82}}</td>
+ <td>{{data83}}</td>
+ <td>{{data84}}</td>
+</tr>
+<tr class="cell7">
+ <td>土壤湿度_3</td>
+ <td>{{data91}}</td>
+ <td>{{data92}}</td>
+ <td>{{data93}}</td>
+ <td>{{data94}}</td>
+</tr>
+</body>
+
+</html>

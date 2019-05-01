@@ -1,0 +1,61 @@
+﻿<!-- myfirstvis/templates/数据分析.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实时数据</title>
+</head>
+{% load staticfiles %}
+<link type="text/css" rel="stylesheet" href="/static/css/17.css">
+<script type='text/javascript' src='{% static "JS/datetime.js" %}'></script>
+<script type='text/javascript' src='{% static "JS/echarts.js" %}'></script>
+    {% for jsfile_name in script_list %}
+    <script src="{{host}}/{{jsfile_name}}.js"></script>
+    {% endfor %}
+<>
+<nav>
+<ul>
+<li class="zh">智慧农业监测系统</li>
+<li class="selected"><a href="{% url 'shishishuju' %}">{{views.shishishuju}}实时数据</a></li>
+<li><a href="{% url 'tuxiangjiexi' %}">{{views.tuxiangjiexi}}图像解析</a></li>
+<li><a href="{% url 'video' %}">{{views.video}}视频连接</a></li>
+<div class="dropdown">
+    <button class="dropbtn">历史数据</button>
+    <div class="dropdown-content">
+        <a href="{% url 'shujudaoru'%}">{{views.shujudaoru}}数据导入</a>
+        <a href="{% url 'shujufenxi'%}">{{views.shujufenxi}}数据分析</a>
+        <a href="{% url 'other1' %}">{{views.other1}}其他</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">数据查询</button>
+    <div class="dropdown-content">
+        <a href="{% url 'xiala1' %}">{{views.xiala1}}下拉导航 1</a>
+        <a href="{% url 'xiala2' %}">{{views.xiala2}}下拉导航 2</a>
+        <a href="{% url 'other1' %}">{{views.other1}}其他</a>
+    </div>
+</div>
+</ul>
+</nav>
+
+<p>
+    <form method="post">
+    <table>
+    <tr>
+    <td name="min_day">开始日期: <input type="date" name="min_day" /></td>
+    <td name="max_day">结束日期：<input type="date" name="max_day" /></td>
+    <td><input type="submit" class="button"value="查 询" onclick="selecttime()" />
+    </td>
+    </tr>
+    <tr>
+    <td><span id="sp"></span></td>
+    </tr>
+    </table>
+    {% csrf_token %}
+    </form>
+</p>
+<div class="page">
+    {{pageecharts|safe}}
+</div>
+</body>
+</html>

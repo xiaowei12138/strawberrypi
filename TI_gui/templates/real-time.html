@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>智能农场可视化平台</title>
+  </head>
+  {% load staticfiles %}
+  <link type="text/css" rel="stylesheet" href="/static/css/real-time.css">
+	 <script type="text/javascript" src= '{% static "JS/show_date.js" %}'></script>
+  <script type="text/javascript" src= '{% static "JS/datetime.js" %}'></script>
+  <script type="text/javascript" src='{% static "JS/jquery-3.3.1.min.js" %}'></script>
+  <script type="text/javascript" src='{% static "JS/newrefresh.js" %}'></script>
+  	{% for jsfile_name in script_list %}
+    <script src="{{host}}/{{jsfile_name}}.js"></script>
+    {% endfor %}
+	<body>
+	<section id="navigation">
+	<div id="cap">
+		<caption>
+			<span>
+			&nbsp;&nbsp;智慧农业<br>
+			可视化平台
+			</span>
+		</caption>
+		</div>
+		<div id="n">
+		<ul>
+		 <li><a href="{% url 'real_time' %}" class="a">{{views.real_time}}实时数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="100" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'video' %}" class="a">{{views.video}}视频链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><div class="dropdown">
+  <button class="dropbtn">异常分析</button>
+  <div class="dropdown-content">
+    <a href="{% url 'etiological_analysis' %}">{{views.etiological_analysis}}病因分析</a>
+    <a href="{% url 'data_anomaly_analysis' %}">{{views.data_anomaly_analysis}}数据异常分析</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'main_index' %}" class="a">{{views.main_index}}历史数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		</ul>
+		</div>
+  </section>
+  
+	 <table>
+	     <tr>
+			<td>
+			<font color="#339999";>
+			<form> 
+			  当前时间<div id = "time"></div>
+			</form>
+			</font>
+			 </td>
+			 <td>
+			 <font color="#cc9966;">
+				当前区域 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;A区域
+			 </font>
+			 </td>
+			 <td>
+			 <font color="#993333";>
+				传感器数量 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;5个
+			 </font>
+			 </td>
+		 </tr>
+	 </table>
+			<table width="30%" style='border-collapse:collapse; border-spacing:10px; margin: 0 auto; '>
+
+<tr>
+ <th>数据类型</th>
+ <th>当前数值</th>
+ <th>分析系数</th>
+ <th>系数阈值</th>
+ <th>当前状态</th>
+</tr>
+<tr class="cell3">
+ <td>光照强度</td>
+ <td>{{data11}}</td>
+ <td>{{data12}}</td>
+ <td>{{data13}}</td>
+ <td>{{data14}}</td>
+ </tr>
+<tr class="cell3">
+ <td>空气温度</td>
+ <td>{{data21}}</td>
+ <td>{{data22}}</td>
+ <td>{{data23}}</td>
+ <td>{{data24}}</td>
+</tr>
+<tr class="cell4">
+ <td>空气湿度</td>
+ <td>{{data31}}</td>
+ <td>{{data32}}</td>
+ <td>{{data33}}</td>
+ <td>{{data34}}</td>
+</tr>
+<tr class="cell5">
+ <td>土壤温度_1</td>
+ <td>{{data41}}</td>
+ <td>{{data42}}</td>
+ <td>{{data43}}</td>
+ <td>{{data44}}</td>
+</tr>
+<tr class="cell5">
+ <td>土壤湿度_1</td>
+ <td>{{data51}}</td>
+ <td>{{data52}}</td>
+ <td>{{data53}}</td>
+ <td>{{data54}}</td>
+</tr>
+<tr class="cell6">
+ <td>土壤温度_2</td>
+ <td>{{data61}}</td>
+ <td>{{data62}}</td>
+ <td>{{data63}}</td>
+ <td>{{data64}}</td>
+</tr>
+<tr class="cell6">
+ <td>土壤湿度_2</td>
+ <td>{{data71}}</td>
+ <td>{{data72}}</td>
+ <td>{{data73}}</td>
+ <td>{{data74}}</td>
+</tr>
+<tr class="cell7">
+ <td>土壤温度_3</td>
+ <td>{{data81}}</td>
+ <td>{{data82}}</td>
+ <td>{{data83}}</td>
+ <td>{{data84}}</td>
+</tr>
+<tr class="cell7">
+ <td>土壤湿度_3</td>
+ <td>{{data91}}</td>
+ <td>{{data92}}</td>
+ <td>{{data93}}</td>
+ <td>{{data94}}</td>
+			</table>
+    </body>
+ </html>

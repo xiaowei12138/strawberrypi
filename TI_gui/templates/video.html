@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>智能农场可视化平台</title>
+  </head>
+  {% load staticfiles %}
+  <link type="text/css" rel="stylesheet" href="/static/css/video.css">
+  <link type="text/css" rel="stylesheet" href="/static/css/etiological-analysis.css">
+   <link type="text/css" rel="stylesheet" href="/static/css/data-anomaly-analysis.css">
+	<body>
+	<section id="navigation">
+	<div id="cap">
+		<caption>
+			<span>
+			&nbsp;&nbsp;智慧农业<br>
+			可视化平台
+			</span>
+		</caption>
+		</div>
+		<div id="n">
+		<ul>
+		 <li><a href="{% url 'real_time' %}" class="a">{{views.real_time}}实时数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="100" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'video' %}" class="a">{{views.video}}视频链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><div class="dropdown">
+  <button class="dropbtn">异常分析</button>
+  <div class="dropdown-content">
+    <a href="{% url 'etiological_analysis' %}">{{views.etiological_analysis}}病因分析</a>
+    <a href="{% url 'data_anomaly_analysis' %}">{{views.data_anomaly_analysis}}数据异常分析</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'main_index' %}" class="a">{{views.main_index}}历史数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		</ul>
+		</div>
+  </section>
+
+		<table border="8"> 
+				<tr>
+					<td colspan="5" rowspan="5"></td>
+					<th>其余区域监控画面</th>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<td>
+						1此处是静止画面
+					</td>
+				</tr>
+				<tr>
+					<td>
+						2此处是静止画面
+					</td>
+				</tr>
+				<tr>
+					<td>
+						3此处是静止画面
+					</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<th>
+					主监控画面
+					</th>
+					<td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>
+					<th>
+					<form>
+					<input type="submit" value="类品识别" class="btn">
+					</form>
+					</th>
+					
+					<th>
+					<form>
+					<input type="submit" value="病类识别" class="btn">
+					</form>
+					</th>
+					
+					<td>
+					4此处是静止画面
+					</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<td colspan="5" id="bala">balabalana
+					</td>
+					<td>
+					5此处是静止画面
+					</td>
+				</tr>
+			</table>
+	</body>
+	</html>

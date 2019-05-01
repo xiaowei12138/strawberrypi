@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>智能农场可视化平台</title>
+  </head>
+  {% load staticfiles %}
+<link type="text/css" rel="stylesheet" href="/static/css/main-index.css">
+  <script type='text/javascript' src='{% static "JS/datetime.js" %}'></script>
+  <script type='text/javascript' src='{% static "JS/btn_.js" %}'></script>
+   <script type='text/javascript' src='{% static "JS/try.js" %}'></script>
+  {% for jsfile_name in script_list %}
+        <script src="{{ host }}/{{ jsfile_name }}.js"></script>
+    {% endfor %}
+  <body>
+  <section id="navigation">
+  <div id="cap">
+    <caption>
+	<span>
+	&nbsp;&nbsp;智能农场<br>
+	可视化平台
+	</span>
+	</caption>
+  </div>
+	
+	<div id="n">
+		<ul>
+		 <li><a href="{% url 'real_time' %}" class="a">{{views.real_time}}实时数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="100" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'video' %}" class="a">{{views.video}}视频链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><div class="dropdown">
+  <button class="dropbtn">异常分析</button>
+  <div class="dropdown-content">
+    <a href="{% url 'etiological_analysis' %}">{{views.etiological_analysis}}病因分析</a>
+    <a href="{% url 'data_anomaly_analysis' %}">{{views.data_anomaly_analysis}}数据异常分析</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'main_index' %}" class="a">{{views.main_index}}历史数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		</ul>
+  </section>
+			<div id="tab">
+			 <nav>
+			 <table>
+			 <tr>
+				 <form method="post" action="">
+					 {% csrf_token %}
+			 <td>
+				 <table>
+    	<tr>
+    	<td name="min_day">开始日期: <input type="date" name="min_day" /></td>
+    	<td name="min_day">结束日期：<input type="date" name="max_day" /></td>
+    	</td>
+    	</tr>
+    	<tr>
+    	<td><span id="sp"></span></td>
+    	</tr>
+    	</table>
+				 <td>
+					 <input type="submit" value="查询" class="btn" onclick="selecttime()"/></td>
+			</td>
+				 </form>
+
+<form METHOD="POST">
+		<td>
+	<input type="file" value="import" class="btn"  size="80"  name="filename"  multiple/>
+			</td>
+
+			 <td>
+				 <button type="submit" value="unload"class="btn" onclick="show();">上传</button>
+				 {% csrf_token %}
+			 </td>
+			  <td>
+			  <input type="submit" value="分析"class="btn">
+			  </td>
+</form>
+			 </tr>
+			 </table>
+			 </ul>
+			 </nav>
+				<div id="photo">
+	 			{{pageecharts|safe}}
+  				</div>
+     </div>
+
+
+  </body>
+</html>

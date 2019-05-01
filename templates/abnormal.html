@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>智能农场可视化平台</title>
+  </head>
+  {% load staticfiles %}
+  <link type="text/css" rel="stylesheet" href="/static/CSS/abnormal.css">
+  <script type="text/javascript" src="{%  static 'JS/shuaxinselect.js' %}"></script>
+  <script type="text/javascript" src='{% static "JS/jquery-3.3.1.min.js" %}'></script>
+  {% for jsfile_name in script_list %}
+    <script src="{{host}}/{{jsfile_name}}.js"></script>
+    {% endfor %}
+	<body>
+	<section id="navigation">
+	<div id="cap">
+		<caption>
+			<span>
+			&nbsp;&nbsp;智能农场<br>
+			可视化平台
+			</span>
+		</caption>
+		</div>
+		<div id="n">
+		<ul>
+		 <li><a href="{% url 'real_time' %}" class="a">{{views.real_time}}实时数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="100" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'video' %}" class="a">{{views.video}}视频链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+			<p class="filp">异常检测
+				<div class="panel">
+				<p><a href="#">1</a></p>
+				<p><a href="#">2</a></p>
+			</div>
+			</p>
+		 <li><a href="{% url 'main_index' %}" class="a">{{views.main_index}}历史数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		</ul>
+		</div>
+  </section>
+  
+			<div id="photo1">
+			</div>
+			
+			<div class="abnormal">
+				<form>
+				 <input type="submit" value="abnormal" class="btn">
+				</form>
+			</div>
+
+			<div class="sick">
+			<form method="post">
+			<select name="department" onChange="setMajor()">
+			<option value="-1">--请选择--</option>
+			<option value="0">苹果黑星病</option>
+			<option value="1">苹果健康</option>
+			<option value="2">苹果松锈病</option>
+				<option value="3">葡萄褐斑病</option>
+				<option value="4">葡萄黑腐病</option>
+				<option value="5">樱桃 健康</option>
+				<option value="6">樱桃白粉病</option>
+				<option value="7">玉米花叶病毒病</option>
+				<option value="8">玉米 健康</option>
+				<option value="9">草莓 健康</option>
+				<option value="10">草莓叶枯病</option>
+			</select>
+			<select name="major"></select>
+				<select name="timesplit">
+					<option value="-1">--请选择--</option>
+				<option value="0">一天</option>
+				<option value="1">三天</option>
+				<option value="2">一周</option>
+				</select>
+			</form>
+			</div>
+		</body>
+</html>

@@ -1,0 +1,165 @@
+body
+{
+	background-color:#30313c;
+	color:white;
+    font-size:130%;
+}
+#photo1{
+	background-color:#24242b;
+	width:800px;
+	height:300px;
+	padding:100px;
+	margin-left:250px;
+}
+.abnormal{
+	margin-left:1150px;
+	margin-top:-45px;
+}
+.sick{
+	margin-left:950px;
+	margin-top:-45px;
+}
+.plant{
+	margin-left:1050px;
+	margin-top:-45px;
+}
+body
+{
+	background-color:#30313c;
+	color:white;
+    font-size:130%;
+}
+section#navigation
+{
+    display: table-cell;
+    background-color: #24242b;
+    width: 220px;
+	height:900px;
+    padding: 5px;
+	clear:left;
+	float:left;
+    color:white;
+	font-size:120%;
+}
+span{
+	color:#376492;
+	font-size:140%;
+}
+ul{
+	list-style-type:none;
+}
+#n{
+	padding-top:30px;
+	margin-top:30px;
+}
+#cap{
+    padding-top:30px;
+    margin-top:30px;
+    margin-left:18px;	
+}
+td{
+	padding:37px;
+	margin:20px;
+	color:#5a6276;
+}
+#photo{
+	background-color:#24242b;
+	width:380px;
+	height:500px;
+	padding:100px;
+	margin-left:260px;
+}
+#ch{
+	background-color:#24242b;
+	width:580px;
+	height:700px;
+	margin-top:-700px;
+	margin-right:60px;
+	float:right;
+}
+.btn{
+	background-color:#5a6276;
+	width:95px;
+	height:45px;
+	color:white;
+	font-size:90%;
+}
+#video{
+	background-color:#3399ff;
+}
+table{
+	margin:0px 100px 100px 270px;
+	width:1100px;
+	height:900px;
+	background-color:#24242b;
+}
+#bala{
+	background-color:#5a6276;
+}
+.a{
+	text-decoration:none;
+	color:#666666;
+}
+.photo2{
+	background-color:#30313c;
+	width:900px;
+	height:500px;
+	margin-top:-50px;
+	
+}
+.dropbtn {
+    background-color:#24242b;
+    color: #787878;
+	font-size:25px;
+    border: none;
+	margin-left:-5px;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#24242b;
+    min-width: 160px;
+	font-size:80%;
+}
+.dropdown-content a {
+    color: #787878;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color:#B0B0B0}
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+.dropdown:hover .dropbtn {
+    background-color:#24242b;
+}
+#btn1{
+	background-color:#5a6276;
+	width:95px;
+	height:45px;
+	color:white;
+	font-size:90%;
+}
+
+#btn2{
+	background-color:#5a6276;
+	width:95px;
+	height:45px;
+	color:white;
+	font-size:90%;
+}
+
+#btn3{
+	background-color:#5a6276;
+	width:95px;
+	height:45px;
+	color:white;
+	font-size:90%;
+}
+

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>智能农场可视化平台</title>
+  </head>
+  {% load staticfiles %}
+  <link type="text/css" rel="stylesheet" href="/static/css/data-anomaly-analysis.css">
+	<body>
+	<section id="navigation">
+	<div id="cap">
+		<caption>
+			<span>
+			&nbsp;&nbsp;智慧农业<br>
+			可视化平台
+			</span>
+		</caption>
+		</div>
+		<div id="n">
+		<ul>
+		 <li><a href="{% url 'real_time' %}" class="a">{{views.real_time}}实时数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="100" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'video' %}" class="a">{{views.video}}视频链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><div class="dropdown">
+  <button class="dropbtn">异常分析&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+  <div class="dropdown-content">
+    <a href="{% url 'etiological_analysis' %}">{{views.etiological_analysis}}病因分析</a>
+    <a href="{% url 'data_anomaly_analysis' %}">{{views.data_anomaly_analysis}}数据异常分析</a>
+  </div>
+</div></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		 <li><a href="{% url 'main_index' %}" class="a">{{views.main_index}}历史数据&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></li></li><hr style="border:1 dashed #faebd7" width="60%" color=#faebd7 SIZE=1 align="left">
+		</ul>
+		</div>
+  </section>
+  
+			<div id="photo1">
+				<div class="photo2">
+					<div id="fenxi">
+						<div id="zifuchuan">
+							{% for i in data1%}
+
+						<p>{{i}}</p>
+
+						{% endfor %}
+						</div>
+						<div id="gailv">
+							{% for i in data2%}
+
+						<p>{{i}}</p>
+
+						{% endfor %}
+						</div>
+						<div id="photo3">
+							{% load staticfiles %}
+							<img src="{% static images %}"width=100% height=100%">
+						</div>
+					</div>
+
+
+
+				</div>
+				<form method="post" action="">
+				 <input type="submit" value="renovate" id="btn31" name="btn31"/>
+					{% csrf_token %}
+				 <input type="submit" value="order" id="btn32" name="btn32"/>
+				    {% csrf_token %}
+				</form>
+				</div>
+		</body>
+</html>

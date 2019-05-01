@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实时数据</title>
+</head>
+{% load staticfiles %}
+<link type="text/css" rel="stylesheet" href="/static/css/15.css">
+
+<body>
+<nav>
+<ul>
+<li class="zh">智慧农业监测系统</li>
+<li class="selected"><a href="{% url 'shishishuju' %}">{{views.shishishuju}}实时数据</a></li>
+<li><a href="{% url 'tuxiangjiexi' %}">{{veiws.shujujiexi}}图像解析</a></li>
+<li><a href="{% url 'video'%}">{{views.video}}视频连接</a></li>
+<div class="dropdown">
+    <button class="dropbtn">历史数据</button>
+    <div class="dropdown-content">
+        <a href="{% url 'shujudaoru'%}">{{views.shujudaoru}}数据导入</a>
+        <a href="{% url 'shujufenxi'%}">{{views.shujufenxi}}数据分析</a>
+        <a href="{% url 'other1' %}">{{views.other1}}其他</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">数据查询</button>
+    <div class="dropdown-content">
+        <a href="{% url 'xiala1' %}">{{views.xiala1}}下拉导航 1</a>
+        <a href="{% url 'xiala2' %}">{{views.xiala2}}下拉导航 2</a>
+        <a href="{% url 'other1' %}">{{views.other1}}其他</a>
+    </div>
+</div>
+</ul>
+</nav>
+<img id="txjx"
+src="C:\Users\zhangsh\Desktop\大棚\新建文件夹\9.jpg">

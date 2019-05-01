@@ -1,0 +1,145 @@
+table{
+	width:1260px;
+	margin:0px 1000px 0px 100px;
+	border-collapse: separate;
+	border-spacing: 40px;
+}
+td{
+	background-color:#24242b;
+	margin:50px;
+	text-align:center;
+}
+body
+{
+	background-color:#30313c;
+	color:white;
+    font-size:130%;
+}
+section#navigation
+{
+    display: table-cell;
+    background-color: #24242b;
+    width: 14%;
+	height:900px;
+    padding: 5px;
+	clear:left;
+	float:left;
+    color:white;
+	font-size:120%;
+}
+span{
+	color:#376492;
+	font-size:140%;
+}
+ul{
+	list-style-type:none;
+}
+#n{
+	padding-top:30px;
+	margin-top:30px;
+}
+#cap{
+    padding-top:30px;
+    margin-top:30px;
+    margin-left:18px;	
+}
+td{
+	padding:37px;
+	margin:20px;
+}
+#photo{
+	background-color:#24242b;
+	width:1000px;
+	height:700px;
+	padding:100px;
+	margin:0 auto;
+
+}
+#ch{
+	background-color:#24242b;
+	width:580px;
+	height:700px;
+	margin-top:-700px;
+	margin-right:60px;
+	float:right;
+}
+.btn{
+	background-color:#5a6276;
+	width:95px;
+	height:45px;
+	color:white;
+	font-size:90%;
+}
+.bttn{
+	background-color:#5a6276;
+	width:70px;
+	height:35px;
+	border-color:#5a6276;
+}
+#nowdate{
+	background-color:#3399ff;
+}
+
+.a{
+	text-decoration:none;
+	color:#666666;
+}
+.dropbtn {
+    background-color:#24242b;
+    color: #787878;
+	font-size:25px;
+    border: none;
+	margin-left:-5px;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#24242b;
+    min-width: 160px;
+	font-size:80%;
+}
+.dropdown-content a {
+    color: #787878;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color:#B0B0B0}
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+#btn{
+background-color:#5a6276;
+	width:95px;
+	height:45px;
+	color:white;
+	font-size:90%;
+}
+.cell3{
+background-color:#C9E0C9;
+    font-size: 8pt;
+}
+.cell4{
+background-color:#FEDEF8;
+    font-size: 8pt;
+}
+.cell5{
+background-color:#EFEFCB;
+    font-size: 8pt;
+}
+.cell6{
+background-color:#D3F1F8;
+    font-size: 8pt;
+}
+.cell7{
+background-color:#CCC6E3;
+    font-size: 8pt;
+}
+tr td{
+	margin: 0 auto;
+}
